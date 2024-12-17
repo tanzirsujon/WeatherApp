@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Poppins:wght@400;500&family=Roboto&display=swap');
+
+body {
+  background-color: rgba(37, 35, 35, 1);
+}
+
+.cardcontainer {
+  background-color: rgba(37, 35, 35, 1);
+
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.card {
+  background: linear-gradient(0.38turn, rgb(173, 54, 203)35%, rgb(50, 51, 51)69%);
+  opacity: 100%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.divleft {
+  background: linear-gradient(rgb(16, 195, 142)0%, rgb(14, 132, 148)100%);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.divright {
+  background: linear-gradient(rgb(16, 195, 142)0%, rgb(14, 132, 148)100%);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+#Ellipse{
+  transition: all 0.5s ease-in;
+}
+.hcard1{
+background: linear-gradient( rgba(142, 79, 156, 1),rgb(178, 80, 202));
+
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+
+
+}
+
+.hcard1 div{
+  background: linear-gradient(-65deg,rgba(58, 53, 54, 1),rgba(73, 65, 72, 1));
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}

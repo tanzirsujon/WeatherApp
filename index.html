@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER-APP</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body class=" h-[100vh] w-[100vw] bg-[]">
+    <header class="flex justify-center w-full">
+        <nav class="flex justify-between content-center items-center h-[13vh] w-[80vw] relative">
+
+            <div class="appname">
+                <span class="logocontainr absolute w-12 top-3 right-[76.3rem]"><img src="./img/Group 48.png"
+                        alt="weather logo"></span>
+                <div class=" text-white text-4xl poppins-regular">WeatherFinder</div>
+                <span class="showtime absolute flex  text-white  left-[12rem] top-[4.5rem] poppins-regular">
+                    <span id="hour">00</span>
+                    <span id="">:</span>
+                    <span id="minute">00</span>
+                    <span id="ampm"></span>
+                </span>
+            </div>
+            <ul class="flex justify-around content-center items-center gap-10">
+                <li><a href="" class="text-white poppins-medium text-lg">Today</a></li>
+                <li><a href="" class="text-white poppins-medium text-lg">Tommorow</a></li>
+                <li><a href="" class="text-white poppins-medium text-lg">Monthly Forecast</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container h-[80vh] w-full ">
+            <div id="togglecontainer" class="flex gap-2 ml-[7.5rem] w-[20vw] items-center">
+                <span class="text-white text-2xl">&deg;C</span>
+                <span class="relative" id="Rectangle"><img class="w-[4.2vw] " src="./img/Rectangle 5.png" alt=""></span>
+                <span class="absolute left-[9.1rem]" id="Ellipse"><img class="w-[1.1vw]" src="./img/Ellipse 5.png"
+                        alt=""></span>
+                <span class="text-white text-2xl">&deg;F</span>
+
+            </div>
+
+            <div class=" formvalue h-[70vh] w-full flex  items-center flex-col mt-4 gap-10 ">
+                <div class="formdiv">
+                    <form action="#" class="relative ">
+                        <input type="search" id="inp1"
+                            class="  outline-none pl-16 poppins-regular font-light text-lg  w-[33vw] h-[5.5vh] rounded-xl bg-[rgb(217,217,217)]"
+                            placeholder="Search Loacation..">
+                        <button type="button" id="srchicon"
+                            class="absolute left-[1.5rem] top-[0.30rem] outline-none "><img src="./img/search.png"
+                                class="w-8" alt="SearchICon"></button>
+                    </form>
+
+                </div>
+                <div class="valuediv text-white  flex justify-between w-full  ">
+                    <span class="divleft h-[44vh] w-[10vw] rounded-tr-3xl rounded-br-3xl mt-[0.5rem] ">
+
+                    </span>
+                    <div class="flex  select-none items-center justify-center gap-20 w-[56vw] ">
+
+                        <span class="arrow"><button class="outline-none" id="prevBtn"><img
+                                    src="./img/left arrow_ (1).png" alt="Arrow"></button></span>
+                        <div id="weather-container"
+                            class="cardcontainer  w-[42vw] h-[48vh] flex items-center justify-around overflow-x-hidden gap-28">
+
+                            <div class="card h-[44vh] w-[40vw] rounded-3xl flex flex-col items-center justify-around">
+                                <div
+                                    class="city flex gap-1 self-start relative poppins-regular font-light text-xl ml-10 mt-5">
+                                    <span id="cityname">Dhaka</span>
+                                    <span class=""><img class="w-6 " src="./img/location.png" alt="Location"></span>
+                                </div>
+                                <div class="flex flex-col w-full items-center pl-4 gap-0">
+                                    <div class="temp flex items-center gap-3 h-[8vh]">
+                                        <span class="w-[1.4rem]"><img class="h-[5.5vh]" src="./img/tempreture.png"
+                                                alt=""></span>
+                                        <span id="citytemp"
+                                            class="tempvalue poppins-regular font-light text-[3.5rem]"></span>
+                                        <span class="w-[5rem]"><img class="h-[7.5vh]" src="./img/cloud.png"
+                                                alt=""></span>
+                                    </div>
+                                    <span id="datecardvalue"
+                                        class="datecard flex gap-1 self-start text-white poppins-regular text-[0.8rem] ml-[1.5rem] mb-8">
+
+                                    </span>
+                                </div>
+                                <div>
+                                    <ul class="flex gap-20 w-full">
+                                        <li class="flex flex-col items-center poppins-medium text-white text-sm">
+                                            LATITUDE <span id="latitude1"></span></li>
+                                        <li class="flex flex-col items-center poppins-medium text-white text-sm">
+                                            LONGTITUDE <span id="longtitude1"> </span></li>
+                                        <li class="flex flex-col items-center poppins-medium text-white text-sm">
+                                            WIDN DIRECTION <span id="winddirection1"></span></li>
+                                        <li class="flex flex-col items-center poppins-medium text-white text-sm">WIND
+                                            <span id="wind1"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="arrow"><button class="outline-none" id="nextBtn"><img src="./img/right arrow.png"
+                                    alt="Arrow"></button></span>
+                    </div>
+
+                    <span class="divright h-[44vh] w-[10vw] rounded-tl-3xl rounded-bl-3xl mt-[0.5rem]"></span>
+                </div>
+                <div class="hourlycard  flex items-center justify-around w-full">
+                    <div class="hcard1 relative w-[7vw] h-[15vh]  rounded-3xl flex flex-col justify-end">
+                        <span class="hcardtime absolute left-6 top-3 w-[5vw] text-white poppins-regular">
+                            10:00:AM
+                        </span>
+
+                        <div class=" w-[7vw] h-[8vh] rounded-3xl  ">
+                            <span class="h1imgcon absolute left-6 bottom-6 "><img class="w-[4vw]"
+                                    src="img/com/onlysunny.png" alt=""></span>
+                            <span id="ten1"
+                                class=" text-white poppins-regular absolute left-8 bottom-1 w-[3vw] "></span>
+
+                        </div>
+                    </div>
+                    <div class="hcard1 relative w-[7vw] h-[15vh]  rounded-3xl flex flex-col justify-end">
+                        <span class="hcardtime absolute left-6 top-3 w-[5vw] text-white poppins-regular">
+                            12:00:PM
+                        </span>
+
+                        <div class=" w-[7vw] h-[8vh] rounded-3xl  ">
+                            <span class="h1imgcon absolute left-6 bottom-6 "><img class="w-[4vw]"
+                                    src="img/com/sunny.png" alt=""></span>
+                            <span id="ten2"
+                                class=" text-white poppins-regular absolute left-8 bottom-1 w-[3vw] "></span>
+
+                        </div>
+                    </div>
+                    <div class="hcard1 relative w-[7vw] h-[15vh]  rounded-3xl flex flex-col justify-end">
+                        <span class="hcardtime absolute left-6 top-3 w-[5vw] text-white poppins-regular">
+                            2:00:PM
+                        </span>
+
+                        <div class=" w-[7vw] h-[8vh] rounded-3xl  ">
+                            <span class="h1imgcon absolute left-6 bottom-6 "><img class="w-[4vw]"
+                                    src="img/com/onlycloud.png" alt=""></span>
+                            <span id=""></span>
+                            <span id="ten3"
+                                class=" text-white poppins-regular absolute left-8 bottom-1 w-[3vw] "></span>
+
+                        </div>
+                    </div>
+                    <div class="hcard1 relative w-[7vw] h-[15vh]  rounded-3xl flex flex-col justify-end">
+                        <span class="hcardtime absolute left-6 top-3 w-[5vw] text-white poppins-regular">
+                            4:00:PM
+                        </span>
+
+                        <div class=" w-[7vw] h-[8vh] rounded-3xl  ">
+                            <span class="h1imgcon absolute left-6 bottom-6 "><img class="w-[4vw]"
+                                    src="img/com/lightraind.png" alt=""></span>
+                            <span id="ten4"
+                                class=" text-white poppins-regular absolute left-8 bottom-1 w-[3vw] "></span>
+
+                        </div>
+                    </div>
+                    <div class="hcard1 relative w-[7vw] h-[15vh]  rounded-3xl flex flex-col justify-end">
+                        <span class="hcardtime absolute left-6 top-3 w-[5vw] text-white poppins-regular">
+                            6:00:PM
+                        </span>
+
+                        <div class=" w-[7vw] h-[8vh] rounded-3xl  ">
+                            <span class="h1imgcon absolute left-6 bottom-6 "><img class="w-[4vw]"
+                                    src="img/com/onlysunny.png" alt=""></span>
+                            <span id="ten5"
+                                class=" text-white poppins-regular absolute left-8 bottom-1 w-[3vw] "></span>
+
+                        </div>
+                    </div>
+                    <div class="hcard1 relative w-[7vw] h-[15vh]  rounded-3xl flex flex-col justify-end">
+                        <span class="hcardtime absolute left-6 top-3 w-[5vw] text-white poppins-regular">
+                            8:00:PM
+                        </span>
+
+                        <div class=" w-[7vw] h-[8vh] rounded-3xl  ">
+                            <span class="h1imgcon absolute left-6 bottom-6 "><img class="w-[4vw]" src="img/com/rain.png"
+                                    alt=""></span>
+                            <span id="ten6"
+                                class=" text-white poppins-regular absolute left-8 bottom-1 w-[3vw] "></span>
+
+                        </div>
+                    </div>
+                    <div class="hcard1 relative w-[7vw] h-[15vh]  rounded-3xl flex flex-col justify-end">
+                        <span class="hcardtime absolute left-6 top-3 w-[5vw] text-white poppins-regular">
+                            10:00:PM
+                        </span>
+
+                        <div class=" w-[7vw] h-[8vh] rounded-3xl  ">
+                            <span class="h1imgcon absolute left-6 bottom-6 "><img class="w-[4vw]"
+                                    src="img/com/onlycloud.png" alt=""></span>
+                            <span id="ten7"
+                                class=" text-white poppins-regular absolute left-8 bottom-1 w-[3vw] "></span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <script src="./js/mainindex.js"></script>
+</body>
+
+</html>
