@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Data and State
     const cities = {
         Dhaka: "latitude=23.7104&longitude=90.4074",
-        Sylhet: "latitude=24.9045&longitude=91.8611",
+
 
 
 
