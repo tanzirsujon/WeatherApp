@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Data and State
     const cities = {
         Dhaka: "latitude=23.7104&longitude=90.4074",
+        Sylhet: "latitude=24.9045&longitude=91.8611",
+        Chittagong: "latitude=22.3569&longitude=91.7832",
+        Rajshahi: "latitude=24.3636&longitude=88.6241",
+        Khulna: "latitude=22.8456&longitude=89.5403",
+        Rangpur: "latitude=25.7439&longitude=89.2752",
+        Madhabpur: "latitude=24.6289&longitude=91.5397"
 
 
 
@@ -61,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!response.ok) throw new Error(`Failed to fetch data for ${city}`);
                 const data = await response.json();
 
-                hourlyData.push(data.hourly.temperature_2m.slice(10, 17));
                 weatherData.push({
                     city,
                     temperature: data.current_weather.temperature,
@@ -70,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     wind_direction: data.current_weather.winddirection || 'N/A',
                     wind_speed: data.current_weather.windspeed || 'N/A'
                 });
+                hourlyData.push(data.hourly.temperature_2m.slice(10, 17));
             });
 
             await Promise.all(fetchPromises);
